@@ -14,5 +14,5 @@ func main() {
 		fmt.Fprintf(w, "hello world")
 	})
 
-	log.Fatal(http.ListenAndServe(":"+os.Getenv("NOMAD_PORT_webapp"), nil))
+	log.Fatal(http.ListenAndServe(":"+os.Getenv("PORT"), nil))
 }
