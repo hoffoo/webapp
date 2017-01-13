@@ -17,5 +17,10 @@ func main() {
 		fmt.Fprintf(w, "hello world")
 	})
 
+	http.HandleFunc("/check", func(w http.ResponseWriter, r *http.Request) {
+		log.Println("/check")
+		fmt.Fprintf(w, "ok")
+	})
+
 	log.Fatal(http.ListenAndServe(":"+os.Getenv("PORT"), nil))
 }
